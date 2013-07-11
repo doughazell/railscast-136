@@ -1,0 +1,9 @@
+<div class="review">
+  <strong><%=h review.name %> says:</strong><br />
+  <%=h review.content %>
+  
+  <br><br>
+  <%= __FILE__ + ":" + __LINE__.to_s %>
+  <br><br>
+  <%= review.attributes %>
+</div>

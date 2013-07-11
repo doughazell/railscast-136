@@ -1,0 +1,20 @@
+
+$("#new_review").before('<div id="flash_notice"><%= escape_javascript(flash.discard(:notice)) %></div>');
+
+$("#reviews_count").html("<%= pluralize(@review.product.reviews.count, 'Review') %>");
+$("#reviews").append("<%= escape_javascript(render(:partial => @review)) %>");
+
+<%
+=begin %>
+$("#reviews").html("<%= escape_javascript('Hello') %>");
+<%
+=end %>
+
+$("#review_name").val('');
+$("#review_content").val('');
+
+<%
+=begin %>
+$('body').html("<h1><%= escape_javascript(@review.name) %></h1>").append("<%= escape_javascript(@review.content) %>");
+<%
+=end %>
